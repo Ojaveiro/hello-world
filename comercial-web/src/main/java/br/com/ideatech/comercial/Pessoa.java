@@ -8,7 +8,7 @@ public class Pessoa {
 	public void pegarNomeDaPessoa(String nome){
 		this.nome = "O nome é " + nome;
 		Pessoa p;
-		p.nome="";
+//		p.nome="";
 	}
 
 	public String getNome() {
