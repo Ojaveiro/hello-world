@@ -35,7 +35,7 @@
 					<configuration>
 						<sourceDirectory>src</sourceDirectory>
 						<includeTestSourceDirectory>true</includeTestSourceDirectory>
-						<violationSeverity>false</violationSeverity>
+<!-- 						<violationSeverity>false</violationSeverity> -->
 					</configuration>
 
 				</plugin>
