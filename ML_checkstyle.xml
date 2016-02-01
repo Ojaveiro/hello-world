@@ -10,10 +10,11 @@
 	<property name="fileExtensions" value="java, properties, xml" />
 	<module name="TreeWalker">
 		<module name="JavadocMethod">
-			<property name="scope" value="public" />
+			<property name="scope" value="private" />
 			<property name="allowUndeclaredRTE" value="true" />
 			<property name="allowMissingJavadoc" value="true" />
 			<property name="allowMissingParamTags" value="true"/>
+			<property name="allowMissingReturnTag" value="true"/>
 		</module>
 		<module name="JavadocType">
 			<!-- <property name="authorFormat" value="null"/> -->
