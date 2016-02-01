@@ -17,8 +17,10 @@ public class Principal {
                                     .comNome("Campanha Teste")
                                     .comDataVigenciaInicialEm(new Date())
                                     .comDataVigenciaFinalEm(new Date())
-                                    .comStatus(StatusCampanha.ABERTA).build();
+                                    .comStatus(StatusCampanha.ABERTA)
+                                    .build();
 
+        
         System.out.println(campanha.toString());
     }
 
