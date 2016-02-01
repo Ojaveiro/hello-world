@@ -23,10 +23,10 @@
 			<property name="allowUnknownTags" value="true" />
 		</module>
 		<module name="JavadocVariable">
-			<property name="scope" value="protected" />
+			<property name="scope" value="private" />
 		</module>
 		<module name="JavadocStyle">
-			<property name="scope" value="public" />
+			<property name="scope" value="private" />
 			<!-- the checkHtml check is disabled as it generates incorrect errors -->
 			<property name="checkHtml" value="false" />
 		</module>
