@@ -9,6 +9,25 @@
 	<property name="charset" value="UTF-8" />
 	<property name="fileExtensions" value="java, properties, xml" />
 	<module name="TreeWalker">
+		<module name="JavadocMethod">
+			<property name="scope" value="public" />
+			<property name="allowUndeclaredRTE" value="true" />
+			<property name="allowMissingJavadoc" value="true" />
+		</module>
+		<module name="JavadocType">
+			<!-- <property name="authorFormat" value="null"/> -->
+			<!-- It is unfortunate to have to do this but checkstyle doesn't allow 
+				custom tags -->
+			<property name="allowUnknownTags" value="true" />
+		</module>
+		<module name="JavadocVariable">
+			<property name="scope" value="protected" />
+		</module>
+		<module name="JavadocStyle">
+			<property name="scope" value="public" />
+			<!-- the checkHtml check is disabled as it generates incorrect errors -->
+			<property name="checkHtml" value="false" />
+		</module>
 		<module name="FileContentsHolder" />
 		<module name="OuterTypeFilename" />
 		<module name="IllegalTokenText">
