@@ -13,6 +13,7 @@
 			<property name="scope" value="public" />
 			<property name="allowUndeclaredRTE" value="true" />
 			<property name="allowMissingJavadoc" value="true" />
+			<property name="allowMissingParamTags" value="true"/>
 		</module>
 		<module name="JavadocType">
 			<!-- <property name="authorFormat" value="null"/> -->
