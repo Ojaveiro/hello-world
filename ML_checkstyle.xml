@@ -9,16 +9,33 @@
 	<property name="charset" value="UTF-8" />
 	<property name="fileExtensions" value="java, properties, xml" />
 	<module name="TreeWalker">
-		
+
 		<!-- No need for Javadoc -->
+		<module name="JavadocTagContinuationIndentation">
+			<property name="severity" value="ignore" />
+		</module>
+		
+		<module name="SummaryJavadocCheck">
+			<property name="severity" value="ignore" />
+		</module>
+		
+		<module name="JavadocParagraph">
+			<property name="severity" value="ignore" />
+		</module>
+		
+		<module name="SingleLineJavadoc">
+			<property name="severity" value="ignore" />
+		</module>
+
+
 		<module name="JavadocType">
 			<property name="severity" value="ignore" />
 		</module>
-		
+
 		<module name="JavadocMethod">
 			<property name="severity" value="ignore" />
 		</module>
-		
+
 		<module name="JavadocVariable">
 			<property name="severity" value="ignore" />
 		</module>
@@ -26,7 +43,12 @@
 		<module name="JavadocStyle">
 			<property name="severity" value="ignore" />
 		</module>
-		
+
+		<module name="SummaryJavadoc">
+			<property name="severity" value="ignore" />
+		</module>
+
+
 		<module name="FileContentsHolder" />
 		<module name="OuterTypeFilename" />
 		<module name="IllegalTokenText">
@@ -178,31 +200,19 @@
 			<property name="allowSamelineMultipleAnnotations" value="true" />
 		</module>
 		<module name="NonEmptyAtclauseDescription" />
-		<module name="JavadocTagContinuationIndentation" />
-		<module name="SummaryJavadocCheck" />
-		<module name="JavadocParagraph" />
+
 		<module name="AtclauseOrder">
 			<property name="target"
 				value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, METHOD_DEF, CTOR_DEF, VARIABLE_DEF" />
 			<property name="tagOrder" value="@param, @return, @throws, @deprecated" />
 		</module>
-		<module name="JavadocMethod">
-			<property name="minLineCount" value="2" />
-			<property name="allowedAnnotations" value="Override, Test" />
-			<property name="scope" value="public" />
-			<property name="allowThrowsTagsForSubclasses" value="true" />
-			<property name="allowMissingParamTags" value="true" />
-			<property name="allowMissingThrowsTags" value="true" />
-			<property name="allowMissingReturnTag" value="true" />
-		</module>
+
 		<module name="MethodName">
 			<property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$" />
 			<message key="name.invalidPattern"
 				value="Method name ''{0}'' must match pattern ''{1}''." />
 		</module>
-		<module name="SingleLineJavadoc">
-			<property name="ignoreInlineTags" value="false" />
-		</module>
+
 		<module name="EmptyCatchBlock">
 			<property name="exceptionVariableName" value="expected" />
 		</module>
