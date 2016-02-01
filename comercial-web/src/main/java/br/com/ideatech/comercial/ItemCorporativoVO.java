@@ -41,10 +41,10 @@ public class ItemCorporativoVO extends AbstractVO {
     private BigDecimal custoLiquidoUnitario;
     private BigDecimal custoLiquidoUnitarioGarantido;
 
-    private BigDecimal valorImpostoPIS;
-    private BigDecimal valorImpostoCOFINS;
+    private BigDecimal valorImpostoPis;
+    private BigDecimal valorImpostoCofins;
     private BigDecimal valorImpostoSubstTributaria;
-    private BigDecimal valorImpostoICMS;
+    private BigDecimal valorImpostoIcms;
 
     private BigDecimal margemTecnicaObjetivaTecnica;
     private BigDecimal margemTecnicaObjetivaLiquida;
@@ -61,19 +61,19 @@ public class ItemCorporativoVO extends AbstractVO {
     // /////////////////////////////////////////////////////////
 
     // Propriedades referentes a impostos de nota fiscal calculado pelo garantia
-    private BigDecimal valorGMPIS;
-    private BigDecimal valorGMPISGarantido;
-    private BigDecimal valorGMCOFINS;
-    private BigDecimal valorGMCOFINSGarantido;
-    private BigDecimal valorGMSubstTributaria;
-    private BigDecimal valorGMSubstTributariaGarantido;
+    private BigDecimal valorGmPis;
+    private BigDecimal valorGmPisGarantido;
+    private BigDecimal valorGmCofins;
+    private BigDecimal valorGmCofinsGarantido;
+    private BigDecimal valorGmSubstTributaria;
+    private BigDecimal valorGmSubstTributariaGarantido;
 
     // Essas propriedades servem para calcular impostos quando for item nota
     // fiscal
     private BigDecimal valorCustoGerencial;
-    private boolean isentoPISCOFINS;
+    private boolean isentoPisCofins;
     private boolean isentoSubstTributaria;
-    private ArrayList<Long> idsCadastroIsencaoPISCOFINS;
+    private ArrayList<Long> idsCadastroIsencaoPisCofins;
     private ArrayList<Long> idsCadastroIsencaoSubstTributaria;
 
     // /////////////////////////////////////////////////////////////
@@ -102,24 +102,24 @@ public class ItemCorporativoVO extends AbstractVO {
         custoLiquidoUnitario = BigDecimal.ZERO;
         custoLiquidoUnitarioGarantido = BigDecimal.ZERO;
 
-        valorImpostoPIS = BigDecimal.ZERO;
-        valorImpostoCOFINS = BigDecimal.ZERO;
+        valorImpostoPis = BigDecimal.ZERO;
+        valorImpostoCofins = BigDecimal.ZERO;
         valorImpostoSubstTributaria = BigDecimal.ZERO;
-        valorImpostoICMS = BigDecimal.ZERO;
+        valorImpostoIcms = BigDecimal.ZERO;
 
         margemTecnicaObjetivaTecnica = BigDecimal.ZERO;
         margemTecnicaObjetivaLiquida = BigDecimal.ZERO;
 
-        valorGMPIS = BigDecimal.ZERO;
-        valorGMPISGarantido = BigDecimal.ZERO;
-        valorGMCOFINS = BigDecimal.ZERO;
-        valorGMCOFINSGarantido = BigDecimal.ZERO;
-        valorGMSubstTributaria = BigDecimal.ZERO;
-        valorGMSubstTributariaGarantido = BigDecimal.ZERO;
+        valorGmPis = BigDecimal.ZERO;
+        valorGmPisGarantido = BigDecimal.ZERO;
+        valorGmCofins = BigDecimal.ZERO;
+        valorGmCofinsGarantido = BigDecimal.ZERO;
+        valorGmSubstTributaria = BigDecimal.ZERO;
+        valorGmSubstTributariaGarantido = BigDecimal.ZERO;
 
         valorCustoGerencial = BigDecimal.ZERO;
 
-        isentoPISCOFINS = false;
+        isentoPisCofins = false;
         isentoSubstTributaria = false;
     }
 
@@ -284,19 +284,19 @@ public class ItemCorporativoVO extends AbstractVO {
     }
 
     public BigDecimal getValorImpostoPIS() {
-        return valorImpostoPIS;
+        return valorImpostoPis;
     }
 
     public void setValorImpostoPIS(BigDecimal valorImpostoPIS) {
-        this.valorImpostoPIS = valorImpostoPIS;
+        this.valorImpostoPis = valorImpostoPIS;
     }
 
     public BigDecimal getValorImpostoCOFINS() {
-        return valorImpostoCOFINS;
+        return valorImpostoCofins;
     }
 
     public void setValorImpostoCOFINS(BigDecimal valorImpostoCOFINS) {
-        this.valorImpostoCOFINS = valorImpostoCOFINS;
+        this.valorImpostoCofins = valorImpostoCOFINS;
     }
 
     public BigDecimal getValorImpostoSubstTributaria() {
@@ -308,11 +308,11 @@ public class ItemCorporativoVO extends AbstractVO {
     }
 
     public BigDecimal getValorImpostoICMS() {
-        return valorImpostoICMS;
+        return valorImpostoIcms;
     }
 
     public void setValorImpostoICMS(BigDecimal valorImpostoICMS) {
-        this.valorImpostoICMS = valorImpostoICMS;
+        this.valorImpostoIcms = valorImpostoICMS;
     }
 
     public BigDecimal getMargemTecnicaObjetivaTecnica() {
@@ -332,51 +332,51 @@ public class ItemCorporativoVO extends AbstractVO {
     }
 
     public BigDecimal getValorGMPIS() {
-        return valorGMPIS;
+        return valorGmPis;
     }
 
     public void setValorGMPIS(BigDecimal valorGMPIS) {
-        this.valorGMPIS = valorGMPIS;
+        this.valorGmPis = valorGMPIS;
     }
 
     public BigDecimal getValorGMPISGarantido() {
-        return valorGMPISGarantido;
+        return valorGmPisGarantido;
     }
 
     public void setValorGMPISGarantido(BigDecimal valorGMPISGarantido) {
-        this.valorGMPISGarantido = valorGMPISGarantido;
+        this.valorGmPisGarantido = valorGMPISGarantido;
     }
 
     public BigDecimal getValorGMCOFINS() {
-        return valorGMCOFINS;
+        return valorGmCofins;
     }
 
     public void setValorGMCOFINS(BigDecimal valorGMCOFINS) {
-        this.valorGMCOFINS = valorGMCOFINS;
+        this.valorGmCofins = valorGMCOFINS;
     }
 
     public BigDecimal getValorGMCOFINSGarantido() {
-        return valorGMCOFINSGarantido;
+        return valorGmCofinsGarantido;
     }
 
     public void setValorGMCOFINSGarantido(BigDecimal valorGMCOFINSGarantido) {
-        this.valorGMCOFINSGarantido = valorGMCOFINSGarantido;
+        this.valorGmCofinsGarantido = valorGMCOFINSGarantido;
     }
 
     public BigDecimal getValorGMSubstTributaria() {
-        return valorGMSubstTributaria;
+        return valorGmSubstTributaria;
     }
 
     public void setValorGMSubstTributaria(BigDecimal valorGMSubstTributaria) {
-        this.valorGMSubstTributaria = valorGMSubstTributaria;
+        this.valorGmSubstTributaria = valorGMSubstTributaria;
     }
 
     public BigDecimal getValorGMSubstTributariaGarantido() {
-        return valorGMSubstTributariaGarantido;
+        return valorGmSubstTributariaGarantido;
     }
 
     public void setValorGMSubstTributariaGarantido(BigDecimal valorGMSubstTributariaGarantido) {
-        this.valorGMSubstTributariaGarantido = valorGMSubstTributariaGarantido;
+        this.valorGmSubstTributariaGarantido = valorGMSubstTributariaGarantido;
     }
 
     public BigDecimal getValorCustoGerencial() {
@@ -388,11 +388,11 @@ public class ItemCorporativoVO extends AbstractVO {
     }
 
     public boolean isIsentoPISCOFINS() {
-        return isentoPISCOFINS;
+        return isentoPisCofins;
     }
 
     public void setIsentoPISCOFINS(boolean isentoPISCOFINS) {
-        this.isentoPISCOFINS = isentoPISCOFINS;
+        this.isentoPisCofins = isentoPISCOFINS;
     }
 
     public boolean isIsentoSubstTributaria() {
@@ -404,10 +404,10 @@ public class ItemCorporativoVO extends AbstractVO {
     }
 
     public ArrayList<Long> getIdsCadastroIsencaoPISCOFINS() {
-        if (idsCadastroIsencaoPISCOFINS == null) {
-            idsCadastroIsencaoPISCOFINS = new ArrayList<Long>();
+        if (idsCadastroIsencaoPisCofins == null) {
+            idsCadastroIsencaoPisCofins = new ArrayList<Long>();
         }
-        return idsCadastroIsencaoPISCOFINS;
+        return idsCadastroIsencaoPisCofins;
     }
 
     public ArrayList<Long> getIdsCadastroIsencaoSubstTributaria() {
