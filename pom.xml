@@ -36,7 +36,7 @@
 						<sourceDirectory>src</sourceDirectory>
 						<includeTestSourceDirectory>true</includeTestSourceDirectory>
 						<configLocation>ML_checkstyle.xml</configLocation>
-						
+						<suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
 					</configuration>
 
 				</plugin>
